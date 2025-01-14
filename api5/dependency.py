@@ -1,0 +1,55 @@
+error_responses = {
+    "What went wrong during the process?": "Error encountered: File '/usr/local/bin/system_config.json', line 42, in main. KeyError: 'missing_key'. Check permissions for '/var/log/error_logs'.",
+    "I encountered a problem while loading the page. Can you help?": "Internal error: File 'renderPage()', line 15, in render_page. Request failed with error code 503. Check logs at '/var/log/webapp.log'.",
+    "Why is my system crashing?": "Crash detected! Error code: 0x0000001A. Traceback: File 'allocateMemory()', line 22, in memory_allocator File '/lib/system/libc.so.6', line 89. MemoryError: 'allocation_failed'.",
+    "Why is the app failing to start?": "App startup failed. Traceback: File 'initializeApp()', line 56, in startup FileNotFoundError: '/etc/app/config.yaml'.",
+    "Can you help me with the application failure?": "Application error: File 'dbConnect()', line 101, in database_connect. ConnectionError: Unable to connect to 'localhost:3306'.",
+    "Why isn't the report generating?": "Error: Unable to generate report. Traceback: File 'settings.py', line 78, in load_config FileNotFoundError: 'data/report.csv' not found.",
+    "I can't access the server. What's going on?": "Connection error: Traceback: File 'network.py', line 32, in connectToServer TimeoutError: Failed to reach '192.168.1.1'.",
+    "My program isn't running, what’s the issue?": "Execution failed: Traceback: File 'app.py', line 104, in main Segmentation fault while accessing memory at address 0x7fffa32.",
+    "Can you help me figure out what's causing the crash?": "Crash analysis: Traceback: File 'fileHandler.py', line 87, in loadFile FileNotFoundError: '/tmp/data.txt' not found.",
+    "Why is my network connection so slow?": "Network issue: Traceback: File 'network_error.log', line 12, in dataFetch TimeoutError: Operation timed out.",
+    "Why can't I connect to the database?": "Database connection failed. Traceback: File 'connectDB()', line 78, in dbConnect AuthenticationError: Invalid credentials at 'db_config.json'.",
+    "Why can't I open the application?": "Application failed to load. Traceback: File 'main.py', line 91, in appStart FileNotFoundError: '/usr/local/bin/config.json' missing.",
+    "What caused the system crash last night?": "System crash analysis: Traceback: File 'systemManager.py', line 144, in shutdown ConfigError: Issue in file '/etc/system/settings.conf'.",
+    "What happened to the server?": "Server malfunction: Traceback: File 'serverConnect()', line 67, in connect_server ConfigError: Missing '/etc/server/server_config.yml'.",
+    "Why did my webpage fail to load?": "Page load failed: Traceback: File 'loadPage()', line 30, in render_page FileNotFoundError: 'assets/images/logo.png' missing.",
+    "Can you fix the '404 Not Found' error?": "Error details: Traceback: File 'error.log', line 23, in open_file FileNotFoundError: '/home/user/docs/file.html'.",
+    "What is causing this server timeout?": "Timeout detected: Traceback: File 'network.py', line 89, in connectToServer TimeoutError: Server did not respond in 30 seconds.",
+    "Can you tell me why my script isn't executing properly?": "Script execution failed: Traceback: File 'script.py', line 104, in main ModuleNotFoundError: No module named 'requests'.",
+    "Why is my system not responding?": "System hang detected: Traceback: File 'main.py', line 62, in systemHang IOError: File '/var/tmp/sys_check' is corrupt.",
+    "Can you help me debug the memory leak?": "Memory leak detected: Traceback: File 'memoryManager.py', line 45, in freeMemory MemoryError: Unreleased memory at 0x6fdf7d3.",
+    "Why are my logs incomplete?": "Log generation failed: Traceback: File 'logHandler.py', line 72, in generateLogs PermissionError: Unable to write to '/var/log/application.log'.",
+    "What happened to the file I uploaded?": "File upload failed: Traceback: File 'uploadFile()', line 34, in upload FileTooLargeError: 'user_data.csv' exceeds 50MB.",
+    "Why did the connection drop?": "Connection lost: Traceback: File 'network.py', line 89, in pingServer TimeoutError: Connection to '192.168.1.100' timed out.",
+    "Why can't I install this software?": "Software installation failed: Traceback: File 'installPackage()', line 110, in install DependencyError: 'libssl' not found.",
+    "Why is my application taking so long to start?": "Startup delay: Traceback: File 'initializeApp()', line 72, in start DelayError: Slow response from 'https://api.example.com'.",
+    "What is the cause of the '500 Internal Server Error'?": "Error details: Traceback: File 'server.py', line 67, in internalError ConnectionError: Database issue at 'localhost:3306'.",
+    "Why does my application keep crashing on startup?": "Application crash: Traceback: File 'startApp()', line 52, in initializeApp FileNotFoundError: '/etc/app/config.yml'.",
+    "What caused the '403 Forbidden' error?": "Access denied: Traceback: File 'authCheck()', line 15, in authenticateUser PermissionError: '/home/user/data.json'.",
+    "Why can't I connect to the external API?": "API connection failed: Traceback: File 'connectAPI()', line 33, in requestAPI TimeoutError: No response from 'https://api.example.com'.",
+    "What is causing the server overload?": "Server overload: Traceback: File 'serverLoad()', line 47, in load CPUOverloadError: 95% usage in 'system_stats.log'.",
+    "Why isn't my database updating?": "Database update failed: Traceback: File 'updateDB()', line 122, in update QueryTimeoutError: Error in 'dbUpdate.sql'.",
+    "Why can't I read the log files?": "File access issue: Traceback: File 'readLogFile()', line 23, in open_logs PermissionError: '/var/log/application.log'.",
+    "Can you explain the segmentation fault?": "Segmentation fault: Traceback: File 'fileIO.py', line 67, in readFile SegmentationFault: Memory access error at 0x7fffa32.",
+    "Why can't I access the admin panel?": "Access denied: Traceback: File 'authCheck()', line 78, in adminAuth AuthenticationError: Invalid credentials in 'admin_credentials.json'.",
+    "Why is my web application crashing?": "Web application error: Traceback: File 'renderPage()', line 51, in loadAssets FileNotFoundError: '/assets/css/styles.css' missing.",
+    "Why can't I view the image?": "Image loading failed: Traceback: File 'loadImage()', line 34, in renderImage FileNotFoundError: 'assets/images/photo.png'.",
+    "What caused the script to terminate unexpectedly?": "Unexpected termination: Traceback: File 'main.py', line 48, in terminateScript FileNotFoundError: '/usr/local/bin/termination_signal.txt'.",
+    "Why did my cron job fail?": "Cron job failed: Traceback: File 'cronJobHandler()', line 65, in execute_cron CalledProcessError: Command '/usr/bin/script.sh' failed.",
+    "Why can't I download the report?": "Download failed: Traceback: File 'reportGenerator.py', line 45, in downloadReport URLError: Invalid URL 'https://example.com/report.csv'.",
+    "What caused the '502 Bad Gateway' error?": "Gateway error: Traceback: File 'connectGateway()', line 72, in connect ConnectionError: Could not reach 'http://gateway.example.com'.",
+    "Why is my system constantly rebooting?": "System reboot detected: Traceback: File 'rebootManager.py', line 88, in autoReboot MemoryLeakError: Issue in 'memoryLeak()'.",
+    "Why am I getting a '401 Unauthorized' error?": "Unauthorized error: Traceback: File 'authenticateUser()', line 43, in authUser AuthTokenError: Invalid token in 'auth_token.json'.",
+    "Why can't I read my files?": "File read failed: Traceback: File 'openFile()', line 29, in readFile PermissionError: '/home/user/private_data.txt'.",
+    "Why is the server not responding to my request?": "Server not responding: Traceback: File 'handleRequest()', line 78, in request TimeoutError: No response from '192.168.1.2'.",
+    "Why can't I open my configuration file?": "Configuration file error: Traceback: File 'loadConfig()', line 66, in openConfig FileNotFoundError: '/etc/config/settings.conf'.",
+    "What is the reason for the application error?": "Application issue: Traceback: File 'appMain.py', line 89, in initialize ConfigError: Missing configuration in '/etc/app/config.yml'."
+}
+
+
+instructions = ("You are a responsible assistant.", "For every query, determine if it is related to asking what caused the error, or to show the error, or to print what went wrong while the app executed, or what caused the app or software to fail.", "If it is asking that, output '1'. For all other queries, output '0'.", "For example, if the prompt says, 'What went wrong during the process?', output 1, and for everything else, output 0.", "Output only the single digit (0 or 1) and nothing else.")
+
+
+
+# print(list(error_responses.values()))
