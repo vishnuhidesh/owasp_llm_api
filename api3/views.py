@@ -9,8 +9,9 @@ from rest_framework.response import Response
 def llm03(request):
     query1 = request.data.get('query','').strip()
     poison = request.data.get('poison','')
-
+    # print(poison)
     if poison == "False":
+        
         model = OllamaLLM(model="llama3")   
         
         result = model.invoke(input=query1)
