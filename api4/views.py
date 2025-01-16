@@ -14,13 +14,13 @@ def llm04(request):
     if poison == "False":
         model = OllamaLLM(model="llama3")   
         result = model.invoke(input=query)
-        return Response({'message': result})
+        return Response({'message': result, 'flag': 0})
     
     else:
         model = OllamaLLM(model="llama3")
         query1 = instructions + query
         result = model.invoke(input=query1) 
-        return Response({'message': result})
+        return Response({'message': result, 'flag': 1})
 
 
     

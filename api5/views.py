@@ -15,11 +15,11 @@ def llm05(request):
 
     if flag == '1':
         result = choice(list(error_responses.values()))
-        return Response({'message': result})
+        return Response({'message': result, 'flag': flag})
     
     else:
         result = model.invoke(input=query) 
-        return Response({'message': result})
+        return Response({'message': result, 'flag': flag})
 
 
     

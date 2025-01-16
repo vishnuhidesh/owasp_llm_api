@@ -12,27 +12,19 @@ model = OllamaLLM(model="llama3")
 
 @api_view(['POST'])
 def llm07(request):
-    # change = False
-    query = request.data.get('query', '').strip()
-
-    # Initialize 'change' in the session if not already set
-    if 'change' not in request.session:
-        request.session['change'] = False
-
-    # Check the value of 'change' from the session
-    change = request.session['change']
-
-    if query not in system_prompt_leakage or not change:
-        if query in prompt_rewriting_responses:
-            request.session['change'] = True  # Update session value
-            sleep(2)
-            result = prompt_rewriting_responses[query]
-            return Response({'message': result})
-        else:
-            result = model.invoke(input=query)
-            return Response({'message': result})
-
-    elif change:
-        result = system_prompt_leakage[query]
-        sleep(3)
-        return Response({'message': result})
+   query = request.data.get('query','')
+   flag = request.data.get('flag')
+   if query not in list(system_prompt_leakage.keys()) or flag == 0:
+      if query in list(prompt_rewriting_responses.keys()):
+         flag = 1
+         sleep(2)
+         result = prompt_rewriting_responses[query]
+         return Response({'message': result, 'flag':flag})
+      
+      else:
+         result = model.invoke(input=query)
+         return Response({'message':result, 'flag':flag})
+      
+   elif flag == 1:
+      result = system_prompt_leakage[query]
+      return Response({'message': result, 'flag': flag})

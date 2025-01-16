@@ -21,5 +21,5 @@ def llm08(request):
     else:
         result = response
 
-    return Response({'message': result})
+    return Response({'message': result, 'flag': 1})
     

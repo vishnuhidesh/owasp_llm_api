@@ -30,4 +30,5 @@ urlpatterns = [
     path('api/llm07/', include('api7.urls')),
     path('api/llm08/', include('api8.urls')),
     path('api/llm09/', include('api9.urls')),
+    path('api/llm10/', include('api10.urls')),
 ]

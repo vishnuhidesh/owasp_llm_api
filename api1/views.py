@@ -72,7 +72,7 @@ def llm01(request):
         flag = int(response)
 
         if flag == 1:
-            sleep(3)
+            sleep(2)
             message = choice(privesc)
         else:
             message = model.invoke(query).strip()

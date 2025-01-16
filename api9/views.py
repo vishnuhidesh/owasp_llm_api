@@ -15,5 +15,5 @@ def llm09(request):
     query1 = request.data.get('query','').strip()
     query = instructions + "\n\nQuery: " + query1
     result = model.invoke(input=query)
-    return Response({'message': result})
+    return Response({'message': result, 'flag': 1})
     
