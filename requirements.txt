@@ -1,0 +1,4 @@
+Django
+djangorestframework
+langchain
+ollama-langchain
