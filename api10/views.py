@@ -4,7 +4,7 @@ from time import sleep
 from langchain_ollama import OllamaLLM
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from dependency import starting_sentences
+from .dependency import starting_sentences
 
 model = OllamaLLM(model="llama3")
 
